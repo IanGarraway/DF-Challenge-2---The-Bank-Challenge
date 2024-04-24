@@ -1,0 +1,26 @@
+{
+  "name": "challenge-2-bank-iangarraway",
+  "version": "1.0.0",
+  "description": "Challenge 2 - Bank",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "npx jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-futures-academy-se-2404-a/challenge-2-bank-IanGarraway.git"
+  },
+  "author": "Ian Garraway",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digital-futures-academy-se-2404-a/challenge-2-bank-IanGarraway/issues"
+  },
+  "homepage": "https://github.com/digital-futures-academy-se-2404-a/challenge-2-bank-IanGarraway#readme",
+  "devDependencies": {
+    "jasmine": "^5.1.0"
+  }
+}
