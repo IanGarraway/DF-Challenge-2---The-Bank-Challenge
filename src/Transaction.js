@@ -18,4 +18,8 @@ export default class Transaction{
         return this.#credit;
     }
     getDebit() { return ""; }
+
+    getDate() {
+        return "25/04/2024";
+    }
 }
