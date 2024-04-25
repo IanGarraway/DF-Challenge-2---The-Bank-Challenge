@@ -8,6 +8,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "npx jasmine"
   },
   "repository": {
