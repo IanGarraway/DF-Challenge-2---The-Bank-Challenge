@@ -1,11 +1,15 @@
 export default class Transaction{
+    #value;
     
-    constructor(){
-    if (new.target === Transaction) throw new TypeError("Cannot construct abstract instances directly");
+    
+    
+    constructor(date, value){
+        if (new.target === Transaction) throw new TypeError("Cannot construct abstract instances directly");
+        this.#value = value;
     
     }
 
     getValue() {
-        return 500;
+        return this.#value;
     }
 }

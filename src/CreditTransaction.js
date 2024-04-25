@@ -1,8 +1,8 @@
 import Transaction from "./Transaction.js";
 
 export default class CreditTransaction extends Transaction{
-    constructor() {
-        super()
+    constructor(date, value) {
+        super(date, value)
     }
 
 }
