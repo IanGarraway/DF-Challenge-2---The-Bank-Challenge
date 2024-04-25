@@ -1,6 +1,7 @@
 export default class Transaction{
     #value;
     #credit;
+    #date;
     
     
     
@@ -8,6 +9,7 @@ export default class Transaction{
         if (new.target === Transaction) throw new TypeError("Cannot construct abstract instances directly");
         this.#value = value;
         this.#credit = credit;
+        this.#date = date;
     
     }
 
@@ -20,6 +22,6 @@ export default class Transaction{
     getDebit() { return ""; }
 
     getDate() {
-        return "25/04/2024";
+        return this.#date;
     }
 }
