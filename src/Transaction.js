@@ -17,4 +17,5 @@ export default class Transaction{
     getCredit() {
         return this.#credit;
     }
+    getDebit() { return ""; }
 }
