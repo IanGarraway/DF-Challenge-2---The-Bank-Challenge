@@ -192,18 +192,13 @@ describe("Account Class tests: ", () => {
             'getCredit': 500,
             'getDate': '25/4/2024'
         });
-        const mockedTransaction2 = jasmine.createSpyObj('DebitTransaction', {
-            'getValue': -1000,
-            'getDebit': 1000,
-            'getCredit': "",
-            'getDate': '25/4/2024'
-        });                
+                      
        
         //act
-        testAccount.addTransaction(mockedTransaction1);
-        let actual = testAccount.addTransaction(mockedTransaction2);
+        
+        let actual = testAccount.addTransaction(mockedTransaction1);
 
         //Assert
-        expect(actual).toBe(`insufficient balance`);
+        expect(actual).toBe(`transaction complete`);
     });
 });

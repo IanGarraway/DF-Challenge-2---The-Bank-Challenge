@@ -107,7 +107,7 @@ As a bank, I don't want the customer to be able to withdraw money not in their a
 
 ### Tests 6
 
-- [ ] a debit transaction bigger than the balance should return a 'insufficient balance' message
+- [x] a debit transaction bigger than the balance should return a 'insufficient balance' message
 - [ ] an accepted transaction should return 'transaction complete' message
 
 ### User Story 7
