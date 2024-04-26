@@ -99,6 +99,24 @@ describe("Transaction Tests:", () => {
             expect(testTransaction).toBeInstanceOf(DebitTransaction);
         });
 
+        it("Should return a negative value when you call getValue", () => {
+            //Arrange
+            const testTransaction = new DebitTransaction("25/04/2024", 500);
+            //Act
+            const actual = testTransaction.getValue();
+            //Assert
+            expect(actual).toEqual(-500);
+        });
+
+        it("Should return a different negative value when you call getValue", () => {
+            //Arrange
+            const testTransaction = new DebitTransaction("25/04/2024", 750);
+            //Act
+            const actual = testTransaction.getValue();
+            //Assert
+            expect(actual).toEqual(-750);
+        });
+
         
     }); // end of Debit transaction tests
     
