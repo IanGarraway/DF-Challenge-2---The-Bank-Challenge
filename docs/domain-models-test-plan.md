@@ -31,8 +31,8 @@ As a bank, I want to store a transaction which consists of the date of the trans
 - [x] debitTransaction should instantiate
 - [x] getValue should return a negative value for a debit transaction
 - [x] getValue should return a different negative value for a debit transaction
-- [ ] getDebit should return a positive value for a debit transaction
-- [ ] getDebit should return a different positive value for a debit transaction
+- [x] getDebit should return a positive value for a debit transaction
+- [x] getDebit should return a different positive value for a debit transaction
 - [ ] getCredit should return a blank field for a debit transaction
 - [ ] getDate should return a date for a debit transaction
 - [ ] getDate should return a different date for a debit transaction

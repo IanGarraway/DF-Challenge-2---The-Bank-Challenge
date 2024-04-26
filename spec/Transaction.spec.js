@@ -135,6 +135,15 @@ describe("Transaction Tests:", () => {
             expect(actual).toEqual(750);
         });
 
+        it("Should return an empty string value when getCredit is called", () => {
+            //Arrange
+            const testTransaction = new DebitTransaction("25/04/2024", 750);
+            //Act
+            const actual = testTransaction.getCredit();
+            //Assert
+            expect(actual).toEqual(" ");
+        });
+
         
     }); // end of Debit transaction tests
     
