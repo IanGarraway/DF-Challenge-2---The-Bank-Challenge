@@ -144,6 +144,16 @@ describe("Transaction Tests:", () => {
             expect(actual).toEqual(" ");
         });
 
+        it("Should return the date when getDate is called", () => {
+            //Arrange
+            const testTransaction = new DebitTransaction("25/04/2024", 750);
+            //Act
+            const actual = testTransaction.getDate();
+            //Assert
+            expect(actual).toEqual("25/04/2024");
+        });
+        
+
         
     }); // end of Debit transaction tests
     
