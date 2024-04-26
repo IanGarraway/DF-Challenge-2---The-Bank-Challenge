@@ -183,4 +183,27 @@ describe("Account Class tests: ", () => {
         //Assert
         expect(testAccount.getTransactions().length).toBe(2);
     })
+
+    it("should return a message indicating insufficient balance if the debit transaction is greater than the available balance: ", () => {
+        //Arrange
+        const mockedTransaction1 = jasmine.createSpyObj('CreditTransaction', {
+            'getValue': 500,
+            'getDebit': "",
+            'getCredit': 500,
+            'getDate': '25/4/2024'
+        });
+        const mockedTransaction2 = jasmine.createSpyObj('DebitTransaction', {
+            'getValue': -1000,
+            'getDebit': 1000,
+            'getCredit': "",
+            'getDate': '25/4/2024'
+        });                
+       
+        //act
+        testAccount.addTransaction(mockedTransaction1);
+        let actual = testAccount.addTransaction(mockedTransaction2);
+
+        //Assert
+        expect(actual).toBe(`insufficient balance`);
+    });
 });
