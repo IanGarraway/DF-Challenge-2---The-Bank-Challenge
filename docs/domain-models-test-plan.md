@@ -93,20 +93,34 @@ As a Customer, I should be able to withdraw my money from my account, so I can t
 
 ### Tests 5
 
-- [ ] getBalance should return a decreased balance when a debit transaction is added
-- [ ] getTransactions should return an array one larger than before the transaction was added
-
+- [x] getBalance should return a decreased balance when a debit transaction is added
+- [x] getTransactions should return an array one larger than before the transaction was added
+  
 ### User Story 6
-
-As a customer, I want the bank statement to match the template, so it is consistent with the banks present system
+As a bank, I don't want the customer to be able to withdraw money not in their account, so they don't go into negatives
 
 ### Domain model 6
 
 | Objects    | Properties     | Messages    | Output  |
 | ---------- | -------------- | ----------- | ------- |
-| StatementWriter | -  | - printTransactions({@Transaction[], @float}[]) | - void |
+| account | - #transactions {@Transaction[], @float} | - addTransaction(@transaction) | - void |
 
 ### Tests 6
+
+- [ ] a debit transaction bigger than the balance should return a 'insufficient balance' message
+- [ ] an accepted transaction should return 'transaction complete' message
+
+### User Story 7
+
+As a customer, I want the bank statement to match the template, so it is consistent with the banks present system
+
+### Domain model 7
+
+| Objects    | Properties     | Messages    | Output  |
+| ---------- | -------------- | ----------- | ------- |
+| StatementWriter | -  | - printTransactions({@Transaction[], @float}[]) | - void |
+
+### Tests 7
 
 - [ ] printTransaction takes the list of transactions and outputs them in the same format as required
 
