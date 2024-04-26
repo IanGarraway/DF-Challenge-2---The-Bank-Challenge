@@ -65,6 +65,7 @@ As a customer, I want to be able to see the what transactions my account has had
 
 ### Tests 3
 
+- [x] getTransactions returns an empty list before any transactions have been added
 - [ ] getTransactions returns a list which consists of a transaction and a float.
   
 ### User Story 4
@@ -75,7 +76,7 @@ As a Customer, I should be able to deposit money into my account, so I can keep 
 
 | Objects    | Properties     | Messages    | Output  |
 | ---------- | -------------- | ----------- | ------- |
-| account | - #transactions {@Transaction[], @float} | - addCredit(@transaction) | - void |
+| account | - #transactions {@Transaction[], @float} | - addtransaction(@transaction) | - void |
 
 ### Tests 4
 

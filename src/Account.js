@@ -1,12 +1,19 @@
 export default class Account {
     //properties
-    transactions = [];
+    #transactions = [];
+    #balance = 0;
 
     //constructor
 
     //methods
-    getBalance() { return 0; }
-    getTransactions() { return this.transactions; }
+    getBalance() { return this.#balance; }
+    getTransactions() { return this.#transactions; }
+    
+    addTransaction(newTransaction) { 
+        this.#balance += newTransaction.getValue();
+        
+    }
+
 
 
 }

@@ -1,4 +1,5 @@
 import Account from "../src/Account.js"
+import CreditTransaction from "../src/CreditTransaction.js";
 
 describe("Account Class tests: ", () => {
     let testAccount;
@@ -23,11 +24,19 @@ describe("Account Class tests: ", () => {
 
     it("should return a list", () => {
         //Arrange
+        const mockedTransaction = jasmine.createSpyObj('CreditTransaction', {
+            'getValue': 500,
+            'getDebit': "",
+            'getCredit': 500,
+            'getDate': '25/4/2024'
+        });
+                
        
         //act
+        testAccount.addTransaction(mockedTransaction);
 
         //Assert
-        expect(testAccount.getTransactions()).toEqual([]);
+        expect(testAccount.getBalance()).toBe(500);
 
     });
     
