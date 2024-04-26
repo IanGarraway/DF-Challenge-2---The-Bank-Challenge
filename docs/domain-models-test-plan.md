@@ -80,8 +80,8 @@ As a Customer, I should be able to deposit money into my account, so I can keep 
 
 ### Tests 4
 
-- [ ] getBalance() should return an increased balance when a credit transaction is added
-- [ ] getTransactions() should return an array one larger than before the transaction was added
+- [x] getBalance() should return an increased balance when a credit transaction is added
+- [x] getTransactions() should return an array one larger than before the transaction was added
 
 ### User Story 5
 As a Customer, I should be able to withdraw my money from my account, so I can then use it as I desire
