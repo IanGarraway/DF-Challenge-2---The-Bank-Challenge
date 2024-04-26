@@ -92,5 +92,30 @@ describe("Account Class tests: ", () => {
         expect(testAccount.getBalance()).toBe(1500);
 
     });
+
+    it("should return a increase in the array length when multiple transactions are added", () => {
+        //Arrange
+        const mockedTransaction1 = jasmine.createSpyObj('CreditTransaction', {
+            'getValue': 500,
+            'getDebit': "",
+            'getCredit': 500,
+            'getDate': '25/4/2024'
+        });
+        const mockedTransaction2 = jasmine.createSpyObj('CreditTransaction', {
+            'getValue': 1000,
+            'getDebit': "",
+            'getCredit': 1000,
+            'getDate': '25/4/2024'
+        });
+                
+       
+        //act
+        testAccount.addTransaction(mockedTransaction1);
+        testAccount.addTransaction(mockedTransaction2);
+
+        //Assert
+        expect(testAccount.getTransactions().length).toBe(2);
+
+    });
     
 });
