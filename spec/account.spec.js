@@ -22,6 +22,16 @@ describe("Account Class tests: ", () => {
         
     });
 
+    it("should return a list", () => {
+        //Arrange
+
+        //act
+
+        //Assert
+        expect(testAccount.getTransactions()).toEqual([]);
+
+    });
+
     it("should return a increase in the balance", () => {
         //Arrange
         const mockedTransaction = jasmine.createSpyObj('CreditTransaction', {
