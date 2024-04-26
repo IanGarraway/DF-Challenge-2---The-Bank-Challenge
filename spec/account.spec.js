@@ -113,6 +113,8 @@ describe("Account Class tests: ", () => {
     });
 
     it("should return an array of arrays with the balance in [1][1] matching the balance of the account", () => {
+        //this test also confirms the getTransaction method is also returning the float
+        
         //Arrange
         const mockedTransaction1 = jasmine.createSpyObj('CreditTransaction', {
             'getValue': 500,
@@ -136,4 +138,26 @@ describe("Account Class tests: ", () => {
         
     });
     
+    it("should return a reduced balance when a debit transaction has been added", () => {
+        //Arrange
+        const mockedTransaction1 = jasmine.createSpyObj('CreditTransaction', {
+            'getValue': 1500,
+            'getDebit': "",
+            'getCredit': 1500,
+            'getDate': '25/4/2024'
+        });
+        const mockedTransaction2 = jasmine.createSpyObj('DebitTransaction', {
+            'getValue': -500,
+            'getDebit': 500,
+            'getCredit': "",
+            'getDate': '25/4/2024'
+        });                
+       
+        //act
+        testAccount.addTransaction(mockedTransaction1);
+        testAccount.addTransaction(mockedTransaction2);
+
+        //Assert
+        expect(testAccount.getBalance()).toBe(1000);
+    })
 });

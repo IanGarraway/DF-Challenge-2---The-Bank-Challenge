@@ -66,7 +66,7 @@ As a customer, I want to be able to see the what transactions my account has had
 ### Tests 3
 
 - [x] getTransactions returns an empty list before any transactions have been added
-- [ ] getTransactions returns a list which consists of a transaction and a float.
+- [x] getTransactions returns a list which consists of a transaction and a float.
   
 ### User Story 4
 
