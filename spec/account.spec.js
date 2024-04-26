@@ -160,4 +160,27 @@ describe("Account Class tests: ", () => {
         //Assert
         expect(testAccount.getBalance()).toBe(1000);
     })
+
+    it("should return a the correct length of transactions when a debit transaction is added", () => {
+        //Arrange
+        const mockedTransaction1 = jasmine.createSpyObj('CreditTransaction', {
+            'getValue': 1500,
+            'getDebit': "",
+            'getCredit': 1500,
+            'getDate': '25/4/2024'
+        });
+        const mockedTransaction2 = jasmine.createSpyObj('DebitTransaction', {
+            'getValue': -500,
+            'getDebit': 500,
+            'getCredit': "",
+            'getDate': '25/4/2024'
+        });                
+       
+        //act
+        testAccount.addTransaction(mockedTransaction1);
+        testAccount.addTransaction(mockedTransaction2);
+
+        //Assert
+        expect(testAccount.getTransactions().length).toBe(2);
+    })
 });
