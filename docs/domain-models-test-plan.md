@@ -51,7 +51,7 @@ As a customer I want to be able to see the balance of my account, so I know how 
 
 ### tests 2
 
-- [ ] getBalance should return the balance of the account
+- [x] getBalance should return the balance of the account
 
 ### User Story 3
 
