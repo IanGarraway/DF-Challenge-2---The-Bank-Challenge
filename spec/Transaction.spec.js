@@ -1,13 +1,19 @@
-import Transaction from "../src/Transaction.js"
-import CreditTransaction from "../src/CreditTransaction.js"
+import Transaction from "../src/Transaction.js";
+import CreditTransaction from "../src/CreditTransaction.js";
+import DebitTransaction from "../src/DebitTransaction.js";
 
 describe("Transaction Tests:", () => {
-    xit("should not allow you to create a new transaction", () => {
-            //Arrange
-            //Act
-               
-            //Assert
-            expect(new Transaction()).toThrow(new TypeError("Cannot construct abstract instances directly"));
+
+    it("should not allow you to create a new transaction", () => {
+        //Arrange        
+        //Act
+        try {
+            const test = new Transaction();
+        } catch (error){
+        //Assert
+        expect(error).toEqual(TypeError("Cannot construct abstract instances directly"));
+        }
+        
     });
     
     describe("CreditTransaction Tests:", () => {        
@@ -82,7 +88,19 @@ describe("Transaction Tests:", () => {
             expect(actual).toEqual("24/04/2024");
         });
         
-    });
+    }); // end of Credit transaction tests
+
+    describe("DebitTransaction Tests:", () => {
+        it("Should allow you to create an instance of Debit Transaction", () => {
+            //Arrange
+            //Act
+            const testTransaction = new DebitTransaction();
+            //Assert
+            expect(testTransaction).toBeInstanceOf(DebitTransaction);
+        });
+
+        
+    }); // end of Debit transaction tests
     
 
 
