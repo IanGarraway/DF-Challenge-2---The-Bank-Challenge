@@ -68,7 +68,7 @@ describe("Transaction Tests:", () => {
             //Act
             const actual = testTransaction.getDebit();
             //Assert
-            expect(actual).toEqual("");
+            expect(actual).toEqual(" ");
         });
 
         it("Should return the date when getDate is called", () => {
@@ -115,6 +115,24 @@ describe("Transaction Tests:", () => {
             const actual = testTransaction.getValue();
             //Assert
             expect(actual).toEqual(-750);
+        });
+
+        it("Should return a positive value when getDebit is called", () => {
+            //Arrange
+            const testTransaction = new DebitTransaction("25/04/2024", 500);
+            //Act
+            const actual = testTransaction.getDebit();
+            //Assert
+            expect(actual).toEqual(500);
+        });
+
+        it("Should return a different positive value when getDebit is called", () => {
+            //Arrange
+            const testTransaction = new DebitTransaction("25/04/2024", 750);
+            //Act
+            const actual = testTransaction.getDebit();
+            //Assert
+            expect(actual).toEqual(750);
         });
 
         
