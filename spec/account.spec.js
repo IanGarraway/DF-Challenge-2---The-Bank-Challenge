@@ -22,7 +22,7 @@ describe("Account Class tests: ", () => {
         
     });
 
-    it("should return a list", () => {
+    it("should return a increase in the balance", () => {
         //Arrange
         const mockedTransaction = jasmine.createSpyObj('CreditTransaction', {
             'getValue': 500,
@@ -37,6 +37,24 @@ describe("Account Class tests: ", () => {
 
         //Assert
         expect(testAccount.getBalance()).toBe(500);
+
+    });
+
+    it("should return a increase in the array", () => {
+        //Arrange
+        const mockedTransaction = jasmine.createSpyObj('CreditTransaction', {
+            'getValue': 500,
+            'getDebit': "",
+            'getCredit': 500,
+            'getDate': '25/4/2024'
+        });
+                
+       
+        //act
+        testAccount.addTransaction(mockedTransaction);
+
+        //Assert
+        expect(testAccount.getTransactions().length).toBe(1);
 
     });
     

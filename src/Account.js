@@ -11,7 +11,7 @@ export default class Account {
     
     addTransaction(newTransaction) { 
         this.#balance += newTransaction.getValue();
-        
+        this.#transactions.push([newTransaction, this.#balance]);
     }
 
 
