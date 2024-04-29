@@ -118,11 +118,13 @@ As a customer, I want the bank statement to match the template, so it is consist
 
 | Objects    | Properties     | Messages    | Output  |
 | ---------- | -------------- | ----------- | ------- |
-| StatementWriter | -  | - printTransactions({@Transaction[], @float}[]) | - void |
+| StatementWriter | -  | - printStatement({@Transaction[], @float}[]) | - void |
 
 ### Tests 7
 
-- [ ] printTransaction takes the list of transactions and outputs them in the same format as required
+- [x] lineCrafter produces correctly displayed transaction lines
+- [x] headerString produces the correct header for the report
+- [x] printTransaction takes the list of transactions and outputs them in the same format as required
 
 ## UML class diagram
 
