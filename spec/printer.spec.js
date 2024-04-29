@@ -23,5 +23,12 @@ describe("Printer function tests: ", () => {
         expect(Printer.craftLine(mockTransactionLine)).toBe("25/04/2024 ||  1500.00 ||          || 1500.00")
 
     });
+
+    it("Should return a string matching the collumn headers for statement", () => {
+        //Arrange
+        //Act
+        //Assert
+        expect(Printer.headerString()).toBe("date       || credit  || debit  || balance")
+    });
     
 });
