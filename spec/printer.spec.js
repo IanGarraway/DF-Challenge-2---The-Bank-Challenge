@@ -20,15 +20,16 @@ describe("Printer function tests: ", () => {
             
         // Act
         // Assert
-        expect(Printer.craftLine(mockTransactionLine)).toBe("25/04/2024 ||  1500.00 ||          || 1500.00")
+        expect(Printer.craftLine(mockTransactionLine)).toBe("25/04/2024 || 1500.00 ||        || 1500.00")
 
     });
 
     it("Should return a string matching the collumn headers for statement", () => {
         //Arrange
         //Act
-        //Assert
+        //Assert 
         expect(Printer.headerString()).toBe("date       || credit  || debit  || balance")
+        
     });
     
 });

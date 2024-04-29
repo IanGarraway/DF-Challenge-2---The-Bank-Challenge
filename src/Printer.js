@@ -17,15 +17,22 @@ export default class Printer{
 
     static craftLine(lineData) {
 
-        const padding = 8;
+        //const padding = 8;
                 
         const creditNumber = this.convertNumber(lineData[0].getCredit());
         const debitNumber = this.convertNumber(lineData[0].getDebit());
 
-       return lineData[0].getDate() + " || "+ creditNumber.padStart(padding, " ")+ " || "+ debitNumber.padStart(padding, ` `)+ " || "+ lineData[1].toFixed(2)
+       return lineData[0].getDate() + " || "+ creditNumber.padStart(7, " ")+ " || "+ debitNumber.padStart(6, ` `)+ " || "+ lineData[1].toFixed(2)
     }
 
     static headerString() {
         return "date       || credit  || debit  || balance"
+    }
+
+    static printStatement(transactions) {
+        console.log(this.headerString());
+        for (let i = transactions.length-1; i >= 0; i--){
+            console.log(this.craftLine(transactions[i]));
+        }
     }
 }
