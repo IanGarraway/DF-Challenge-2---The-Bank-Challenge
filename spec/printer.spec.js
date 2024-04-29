@@ -9,7 +9,7 @@ describe("Printer function tests: ", () => {
             'getValue': 1500.00,
             'getDebit': " ",
             'getCredit': 1500.00,
-            'getDate': '25/4/2024'
+            'getDate': '25/04/2024'
         });
 
         //const mockedTransaction = new CreditTransaction(25/4/2024, 1500)
