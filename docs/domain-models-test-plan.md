@@ -129,3 +129,111 @@ As a customer, I want the bank statement to match the template, so it is consist
 ## UML class diagram
 
 ![Class diagram](UMLclassdiagram.png)
+
+## Additional Features
+
+![Additional features Kanban](kanbanboardAdditional.png)
+
+### User Story 8
+
+as a customer, i'd like my credits to be in green, so i can clearly tell what is money being added
+
+### Domain model 8
+
+| Objects    | Properties     | Messages    | Output  |
+| ---------- | -------------- | ----------- | ------- |
+| StatementWriter | -  | - printStatement({@Transaction[], @float}[]) | - void |
+
+### Tests 8
+
+-[ ] credit column comes out green
+
+### User Story 9
+
+As a customer, I would like my debits to be in red, so I can clearly see what money is being removed.
+
+### Domain model 9
+
+| Objects    | Properties     | Messages    | Output  |
+| ---------- | -------------- | ----------- | ------- |
+| StatementWriter | -  | - printStatement({@Transaction[], @float}[]) | - void |
+
+### Tests 9
+
+-[ ] debit column comes out red
+
+### User Story 10
+
+As a customer, I would like my positive balance to be in Green so I can see when I have money
+
+### Domain model 10
+
+| Objects    | Properties     | Messages    | Output  |
+| ---------- | -------------- | ----------- | ------- |
+| StatementWriter | -  | - printStatement({@Transaction[], @float}[]) | - void |
+
+### Tests 10
+
+-[ ] balance column comes out green if it is positive in value
+
+### User Story 11
+
+As a bank, I want accounts to have an overdraft facility which can be enabled
+
+### Domain model 11
+
+| Objects    | Properties     | Messages    | Output  |
+| ---------- | -------------- | ----------- | ------- |
+| account | - #overdraft @boolean | - getOverdraft()<br> -setOverdraft(@boolean)  | - @boolean |
+
+### Tests 11
+
+- [ ] getOverdraft returns false on a new account
+- [ ] getOverdraft returns positive once overdraft has been activated
+- [ ] getOverdraft returns false, after it has been activated and then deactivated
+
+### User Story 12
+
+As a bank, I want to be able to configure the overdraft so it's not the same amount on all accounts
+
+### Domain model 12
+
+| Objects    | Properties     | Messages    | Output  |
+| ---------- | -------------- | ----------- | ------- |
+| account | - #overdraftAmount @boolean | - getOverdraftAmount()<br> - setOverdraftAmount(@float)  | - @float <br> - @string |
+
+### Tests 12
+
+- [ ] getOverdraftAmount returns 0 on a new account
+- [ ] getOverdraftAmount returns 500 after it has been set to 500
+  
+### User Story 13
+
+As a bank, I want customers to only be able to go into negatives if they have an overdraft with sufficient capacity.
+
+### Domain model 13
+
+| Objects    | Properties     | Messages    | Output  |
+| ---------- | -------------- | ----------- | ------- |
+| account | - #balance @float | - addTransaction() | - @string |
+
+### Tests 13
+
+- [ ] addTransaction returns a error message if debit greater than the available balance
+- [ ] addTransaction accepts an debitTransaction if the overdraft is true and the balance + the overdraft amount is greater than the debit.
+- [ ] verify the normal boundary test
+- [ ] verify the abnormal boundary test
+
+### User Story 14
+
+As a customer, I want my balance to be red if the number is a negative, so I can clearly see if I am in my overdraft
+
+### Domain model 14
+
+| Objects    | Properties     | Messages    | Output  |
+| ---------- | -------------- | ----------- | ------- |
+| StatementWriter | -  | - printStatement({@Transaction[], @float}[]) | - void |
+
+### Tests 14
+
+-[ ] balance column comes out red if it is negative in value
