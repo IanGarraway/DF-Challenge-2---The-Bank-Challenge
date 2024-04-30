@@ -2,7 +2,7 @@
 
 url: <https://chat.openai.com/share/bbbaa9c5-6baa-4b83-ae33-b61fe39820c7>
 
-me: I have written a simple banking program in javascript. It has the ability to add credit transactions and debit transaction, and output those transactions with the balance to be printed into a bank statement. I have been asked to make credits and postive balances Green, debits and negative balances Red. I have also been asked to add an overdraft facility to the system, which should be posible to enable and should be configurable on a per-account basis. Please can you supply me with user stories suitable for this scenario.
+me: I have written a simple banking program in javascript. It has the ability to add credit transactions and debit transaction, and output those transactions with the balance to be printed into a bank statement. I have been asked to make credits and positive balances Green, debits and negative balances Red. I have also been asked to add an overdraft facility to the system, which should be possible to enable and should be configurable on a per-account basis. Please can you supply me with user stories suitable for this scenario.
 
 chatgpt 3.5: Sure, here are some user stories for your scenario:
 
@@ -92,7 +92,7 @@ console.log('%cThis is a red message', 'color: red;');
 
 Adding a semicolon at the end of the CSS rules is recommended for better compatibility with some browsers.
 
-Me: if multiple strings have been concatinated together, would this effect only one part of it?
+Me: if multiple strings have been concatenated together, would this effect only one part of it?
 
 ChatGPT: Yes, if multiple strings have been concatenated together and then passed to console.log() with CSS styling, the styling will apply to the entire concatenated string. Let me illustrate:
 
