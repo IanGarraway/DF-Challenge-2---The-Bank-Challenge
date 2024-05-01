@@ -218,5 +218,14 @@ describe("Account Class tests: ", () => {
             //Assert 
             expect(testAccount.getOverdraft()).toBe(true);
         });
+
+        it("should return false on getting the overdraft status after it has been set to true and then back to false", () => {
+            //Arrange
+            //Act
+            testAccount.setOverdraft(true);
+            testAccount.setOverdraft(false);
+            //Assert 
+            expect(testAccount.getOverdraft()).toBe(false);
+        });
     });
 });
