@@ -204,8 +204,8 @@ As a bank, I want to be able to configure the overdraft so it's not the same amo
 
 ### Tests 12
 
-- [ ] getOverdraftAmount returns 0 on a new account
-- [ ] getOverdraftAmount returns 500 after it has been set to 500
+- [x] getOverdraftAmount returns 0 on a new account
+- [x] getOverdraftAmount returns 500 after it has been set to 500
   
 ### User Story 13
 

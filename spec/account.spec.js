@@ -242,5 +242,18 @@ describe("Account Class tests: ", () => {
             //assert
             expect(testAccount.getOverdraftAmount()).toBe(500);
         });
+
+        it("return an insufficient balance message if trying to go negative with no overdraft", () => {
+            //Arrange
+            const mockedTransaction = jasmine.createSpyObj('DebitTransaction', {
+                'getValue': -500,
+                'getDebit': 500,
+                'getCredit': "",
+                'getDate': '25/4/2024'
+            });  
+            //Act
+            //Assert
+            expect(testAccount.addTransaction(mockedTransaction)).toBe("insufficient balance")
+        });
     });
 });
