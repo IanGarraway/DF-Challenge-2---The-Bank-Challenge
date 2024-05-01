@@ -21,7 +21,7 @@ describe("Printer function tests: ", () => {
             
         // Act
         // Assert
-        expect(Printer.craftLine(mockTransactionLine)).toBe("25/04/2024 || "+ chalk.green("1500.00")+" || "+chalk.red("      ")+" || 1500.00")
+        expect(Printer.craftLine(mockTransactionLine)).toBe("25/04/2024 || " + chalk.green("1500.00") + " || " + chalk.red("      ") + " || " + chalk.green("1500.00"))
 
     });
 
@@ -43,7 +43,7 @@ describe("Printer function tests: ", () => {
             
         // Act
         // Assert
-        expect(Printer.craftLine(mockTransactionLine)).toBe("25/04/2024 || "+chalk.green("       ")+" || "+ chalk.red("1500.00") + " || 1500.00")
+        expect(Printer.craftLine(mockTransactionLine)).toBe("25/04/2024 || "+chalk.green("       ")+" || "+ chalk.red("1500.00") + " || " + chalk.green("1500.00"))
 
     });
 

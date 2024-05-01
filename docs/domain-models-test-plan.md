@@ -146,7 +146,7 @@ as a customer, i'd like my credits to be in green, so i can clearly tell what is
 
 ### Tests 8
 
--[ ] credit column comes out green
+-[x] credit column comes out green
 
 ### User Story 9
 
@@ -160,7 +160,7 @@ As a customer, I would like my debits to be in red, so I can clearly see what mo
 
 ### Tests 9
 
--[ ] debit column comes out red
+-[x] debit column comes out red
 
 ### User Story 10
 
