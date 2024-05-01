@@ -3,6 +3,7 @@ export default class Account {
     #transactions = [];
     #balance = 0;
     #overdraft = false;
+    #overdraftAmount = 0;
 
     //constructor
 
@@ -13,7 +14,8 @@ export default class Account {
     getOverdraft() { return this.#overdraft; }
     setOverdraft(overdraft) { this.#overdraft = overdraft; }
     
-    getOverdraftAmount() { return 0; }
+    getOverdraftAmount() { return this.#overdraftAmount; }
+    setOverdraftAmount(overdraftAmount) { this.#overdraftAmount = overdraftAmount; }
     
     addTransaction(newTransaction) {
         

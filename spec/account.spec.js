@@ -234,5 +234,13 @@ describe("Account Class tests: ", () => {
             //assert
             expect(testAccount.getOverdraftAmount()).toBe(0);
         });
+
+        it("getOverdraftAmount() should return 500 on an account which has been set to 500 overdraft", () => {
+            //arrange
+            //act
+            testAccount.setOverdraftAmount(500);
+            //assert
+            expect(testAccount.getOverdraftAmount()).toBe(500);
+        });
     });
 });
