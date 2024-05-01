@@ -18,8 +18,11 @@ export default class Account {
     setOverdraftAmount(overdraftAmount) { this.#overdraftAmount = overdraftAmount; }
     
     addTransaction(newTransaction) {
+        let balanceToCheck = this.#balance; //AI assisted with modification allowing for overdraft
+        if (this.#overdraft) { balanceToCheck += this.#overdraftAmount; }
+
+        if (balanceToCheck < (newTransaction.getValue() * -1)) return `insufficient balance`;
         
-        if (this.#balance < (newTransaction.getValue() * -1)) return `insufficient balance`;
         this.#balance += newTransaction.getValue();
         this.#transactions.push([newTransaction, this.#balance]);
         return `transaction complete`;
