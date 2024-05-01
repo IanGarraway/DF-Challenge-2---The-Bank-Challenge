@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import Printer from "../src/Printer.js"
 import CreditTransaction from "../src/CreditTransaction.js";
 
@@ -20,7 +21,7 @@ describe("Printer function tests: ", () => {
             
         // Act
         // Assert
-        expect(Printer.craftLine(mockTransactionLine)).toBe("25/04/2024 || 1500.00 ||        || 1500.00")
+        expect(Printer.craftLine(mockTransactionLine)).toBe("25/04/2024 || "+ chalk.green("1500.00")+" ||        || 1500.00")
 
     });
 
