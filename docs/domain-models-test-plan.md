@@ -219,8 +219,8 @@ As a bank, I want customers to only be able to go into negatives if they have an
 
 ### Tests 13
 
-- [ ] addTransaction returns a error message if debit greater than the available balance
-- [ ] addTransaction accepts an debitTransaction if the overdraft is true and the balance + the overdraft amount is greater than the debit.
+- [x] addTransaction returns a error message if debit greater than the available balance
+- [x] addTransaction accepts an debitTransaction if the overdraft is true and the balance + the overdraft amount is greater than the debit.
 - [ ] verify the normal boundary test
 - [ ] verify the abnormal boundary test
 
