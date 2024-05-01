@@ -188,9 +188,9 @@ As a bank, I want accounts to have an overdraft facility which can be enabled
 
 ### Tests 11
 
-- [ ] getOverdraft returns false on a new account
-- [ ] getOverdraft returns positive once overdraft has been activated
-- [ ] getOverdraft returns false, after it has been activated and then deactivated
+- [x] getOverdraft returns false on a new account
+- [x] getOverdraft returns positive once overdraft has been activated
+- [x] getOverdraft returns false, after it has been activated and then deactivated
 
 ### User Story 12
 
@@ -200,7 +200,7 @@ As a bank, I want to be able to configure the overdraft so it's not the same amo
 
 | Objects    | Properties     | Messages    | Output  |
 | ---------- | -------------- | ----------- | ------- |
-| account | - #overdraftAmount @boolean | - getOverdraftAmount()<br> - setOverdraftAmount(@float)  | - @float <br> - @string |
+| account | - #overdraftAmount @float | - getOverdraftAmount()<br> - setOverdraftAmount(@float)  | - @float <br> - @string |
 
 ### Tests 12
 

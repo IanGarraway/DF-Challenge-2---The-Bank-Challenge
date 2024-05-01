@@ -227,5 +227,12 @@ describe("Account Class tests: ", () => {
             //Assert 
             expect(testAccount.getOverdraft()).toBe(false);
         });
+
+        it("getOverdraftAmount() should return 0 on a new account", () => {
+            //arrange
+            //act
+            //assert
+            expect(testAccount.getOverdraftAmount()).toBe(0);
+        });
     });
 });

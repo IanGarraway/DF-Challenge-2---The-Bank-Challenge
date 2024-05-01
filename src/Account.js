@@ -9,8 +9,11 @@ export default class Account {
     //methods
     getBalance() { return this.#balance; }
     getTransactions() { return this.#transactions; }
+    
     getOverdraft() { return this.#overdraft; }
-    setOverdraft(overdraft) { this.#overdraft = overdraft;}
+    setOverdraft(overdraft) { this.#overdraft = overdraft; }
+    
+    getOverdraftAmount() { return 0; }
     
     addTransaction(newTransaction) {
         
