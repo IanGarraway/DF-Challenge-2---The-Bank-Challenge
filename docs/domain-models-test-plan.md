@@ -221,8 +221,8 @@ As a bank, I want customers to only be able to go into negatives if they have an
 
 - [x] addTransaction returns a error message if debit greater than the available balance
 - [x] addTransaction accepts an debitTransaction if the overdraft is true and the balance + the overdraft amount is greater than the debit.
-- [ ] verify the normal boundary test
-- [ ] verify the abnormal boundary test
+- [x] verify the normal boundary test
+- [x] verify the abnormal boundary test
 
 ### User Story 14
 
@@ -236,4 +236,4 @@ As a customer, I want my balance to be red if the number is a negative, so I can
 
 ### Tests 14
 
--[ ] balance column comes out red if it is negative in value
+-[x] balance column comes out red if it is negative in value

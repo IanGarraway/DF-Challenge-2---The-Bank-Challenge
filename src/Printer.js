@@ -24,7 +24,10 @@ export default class Printer{
         const creditNumber = this.convertNumber(lineData[0].getCredit());
         const debitNumber = this.convertNumber(lineData[0].getDebit());
 
-        return lineData[0].getDate() + " || " + chalk.green(creditNumber.padStart(7, " ")) + " || " + chalk.red(debitNumber.padStart(6, ` `)) + " || " + chalk.green(lineData[1].toFixed(2));
+        let balanceLine = chalk.green(lineData[1].toFixed(2));
+        if(lineData[1]<0){balanceLine = chalk.red(lineData[1].toFixed(2))}
+
+        return lineData[0].getDate() + " || " + chalk.green(creditNumber.padStart(7, " ")) + " || " + chalk.red(debitNumber.padStart(6, ` `)) + " || " + balanceLine;
     }
 
     static headerString() {

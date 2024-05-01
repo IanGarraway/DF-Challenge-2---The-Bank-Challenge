@@ -54,5 +54,27 @@ describe("Printer function tests: ", () => {
         expect(Printer.headerString()).toBe("date       || credit  || debit  || balance")
         
     });
+
+    it("Should return a string matching a debit line from the bank statement, where the balance is negative", ()=> {
+        
+        // Arrange
+        const mockedTransaction = jasmine.createSpyObj('CreditTransaction', {
+            'getValue': -1500.00,
+            'getDebit': 1500.00,
+            'getCredit': " ",
+            'getDate': '25/04/2024'
+        });
+
+        //const mockedTransaction = new CreditTransaction(25/4/2024, 1500)
+
+        
+
+        const mockTransactionLine = [mockedTransaction, -1500];
+            
+        // Act
+        // Assert
+        expect(Printer.craftLine(mockTransactionLine)).toBe("25/04/2024 || "+chalk.green("       ")+" || "+ chalk.red("1500.00") + " || " + chalk.red("-1500.00"))
+
+    });
     
 });
