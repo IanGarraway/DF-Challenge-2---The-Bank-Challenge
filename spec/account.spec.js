@@ -201,4 +201,11 @@ describe("Account Class tests: ", () => {
         //Assert
         expect(actual).toBe(`transaction complete`);
     });
+
+    it("should return false on getting the overdraft status on a new account", () => {
+        //Arrange
+        //Act
+        //Assert 
+        expect(testAccount.getOverdraft()).toBe(false);
+    });
 });

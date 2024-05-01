@@ -8,6 +8,7 @@ export default class Account {
     //methods
     getBalance() { return this.#balance; }
     getTransactions() { return this.#transactions; }
+    getOverdraft() { return false; }
     
     addTransaction(newTransaction) {
         

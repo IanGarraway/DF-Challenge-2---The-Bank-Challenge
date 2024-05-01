@@ -174,7 +174,7 @@ As a customer, I would like my positive balance to be in Green so I can see when
 
 ### Tests 10
 
--[ ] balance column comes out green if it is positive in value
+-[x] balance column comes out green if it is positive in value
 
 ### User Story 11
 
