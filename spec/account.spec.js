@@ -301,5 +301,21 @@ describe("Account Class tests: ", () => {
             //Assert
             expect(testAccount.getBalance()).toBe(-500)
         });
+
+        it("confirming balance still 0 after a debit transaction with a insufficient overdraft (abnormal boundary test)", () => {
+            //Arrange
+            const mockedTransaction = jasmine.createSpyObj('DebitTransaction', {
+                'getValue': -501,
+                'getDebit': 501,
+                'getCredit': "",
+                'getDate': '25/4/2024'
+            });  
+            //Act
+            testAccount.setOverdraft(true);
+            testAccount.setOverdraftAmount(500);
+            testAccount.addTransaction(mockedTransaction);
+            //Assert
+            expect(testAccount.getBalance()).toBe(0)
+        });
     });
 });
