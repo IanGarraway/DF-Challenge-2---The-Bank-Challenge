@@ -2,13 +2,15 @@ export default class Account {
     //properties
     #transactions = [];
     #balance = 0;
+    #overdraft = false;
 
     //constructor
 
     //methods
     getBalance() { return this.#balance; }
     getTransactions() { return this.#transactions; }
-    getOverdraft() { return false; }
+    getOverdraft() { return this.#overdraft; }
+    setOverdraft(overdraft) { this.#overdraft = overdraft;}
     
     addTransaction(newTransaction) {
         

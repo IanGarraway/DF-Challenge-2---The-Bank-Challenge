@@ -202,10 +202,21 @@ describe("Account Class tests: ", () => {
         expect(actual).toBe(`transaction complete`);
     });
 
-    it("should return false on getting the overdraft status on a new account", () => {
-        //Arrange
-        //Act
-        //Assert 
-        expect(testAccount.getOverdraft()).toBe(false);
+    describe("Overdraft facility tests: ", () => {
+
+        it("should return false on getting the overdraft status on a new account", () => {
+            //Arrange
+            //Act
+            //Assert 
+            expect(testAccount.getOverdraft()).toBe(false);
+        });
+
+        it("should return true on getting the overdraft status after it has been set to true", () => {
+            //Arrange
+            //Act
+            testAccount.setOverdraft(true);
+            //Assert 
+            expect(testAccount.getOverdraft()).toBe(true);
+        });
     });
 });
