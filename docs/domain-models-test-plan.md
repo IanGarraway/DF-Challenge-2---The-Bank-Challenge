@@ -237,3 +237,17 @@ As a customer, I want my balance to be red if the number is a negative, so I can
 ### Tests 14
 
 -[x] balance column comes out red if it is negative in value
+
+### User story 15
+
+As a bank, I want the columns to adjust in size if larger numbers are transacted, but maintain the same width throughout the statement, so the statement looks uniform and easy to read.
+
+### Domain model 15
+
+| Objects    | Properties     | Messages    | Output  |
+| ---------- | -------------- | ----------- | ------- |
+| StatementWriter | -  | - printStatement({@Transaction[], @float}[]) | - void |
+
+### Tests 15
+
+-[x] the columns change size when transactions are larger
