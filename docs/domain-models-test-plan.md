@@ -236,7 +236,7 @@ As a customer, I want my balance to be red if the number is a negative, so I can
 
 ### Tests 14
 
--[x] balance column comes out red if it is negative in value
+- [x] balance column comes out red if it is negative in value
 
 ### User story 15
 
@@ -250,4 +250,4 @@ As a bank, I want the columns to adjust in size if larger numbers are transacted
 
 ### Tests 15
 
--[x] the columns change size when transactions are larger
+- [x] the columns change size when transactions are larger
